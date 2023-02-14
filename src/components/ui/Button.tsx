@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         paddingVertical: 6,
         paddingHorizontal: 12,
-        backgroundColor: Colors.primary500,
+        backgroundColor: Colors.yellow,
         elevation: 2,
-        shadowColor: 'black',
+        shadowColor: Colors.dark,
         shadowOffset: {width: 1, height: 1},
         shadowOpacity: 0.25,
         shadowRadius: 4,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         textAlign: 'center',
-        color: 'white',
+        color: Colors.dark,
         fontSize: 16,
         fontWeight: 'bold'
     }

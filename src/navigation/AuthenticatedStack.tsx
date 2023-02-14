@@ -1,5 +1,5 @@
 import React from "react";
-import {createNativeStackNavigator} from "react-native-screens/native-stack";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 import {Colors} from "../util/constants/Colors";
 import {WelcomeScreen} from "../screens";
@@ -12,9 +12,9 @@ const Stack = createNativeStackNavigator();
 const AuthenticatedStack: React.FC<IAuthenticatedStack> = () => {
     return (
         <Stack.Navigator screenOptions={{
-            headerStyle: {backgroundColor: Colors.primary500},
-            headerTintColor: 'white',
-            contentStyle: {backgroundColor: Colors.primary100},
+            headerStyle: {backgroundColor: Colors.dark},
+            headerTintColor: Colors.white,
+            contentStyle: {backgroundColor: Colors.yellow},
         }}>
             <Stack.Screen name="Welcome" component={WelcomeScreen}/>
         </Stack.Navigator>

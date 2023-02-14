@@ -1,6 +1,6 @@
 import React from "react";
-import {StyleSheet} from "react-native";
-import {createNativeStackNavigator} from "react-native-screens/native-stack";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+
 import {LoginScreen, SignUpScreen} from "../screens";
 import {Colors} from "../util/constants/Colors";
 
@@ -12,12 +12,12 @@ const Stack = createNativeStackNavigator()
 const AuthStack: React.FC<IAuthStack> = () => {
     return (
         <Stack.Navigator screenOptions={{
-            headerStyle: {backgroundColor: Colors.primary500},
-            headerTintColor: 'white',
-            contentStyle: {backgroundColor: Colors.primary100},
+            headerStyle: {backgroundColor: Colors.dark},
+            headerTintColor: Colors.white,
+            contentStyle: {backgroundColor: Colors.yellow},
         }}>
             <Stack.Screen name="Login" component={LoginScreen}/>
-            <Stack.Screen name="Signup" component={SignUpScreen}/>
+            <Stack.Screen name="SignUp" component={SignUpScreen}/>
         </Stack.Navigator>
     );
 }

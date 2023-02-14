@@ -1,14 +1,17 @@
 import React, {useState} from "react";
 import {View, StyleSheet, Alert} from "react-native";
+import {ParamListBase, useNavigation} from "@react-navigation/native";
+
 import {CredentialsInvalid} from "../../util/types/CredentialsInvalid";
 import {Credentials} from "../../util/types/Credentials";
 import {Colors} from "../../util/constants/Colors";
 import {FlatButton} from "../ui";
 import AuthForm from "./AuthForm";
+import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 
 interface IAuthContent {
     isLogin: boolean,
-    onAuthenticate: (inputData: { email: string, password: string }) => void
+    onAuthenticate: (inputData: { email: string, password: string }) => void,
 }
 
 const AuthContent: React.FC<IAuthContent> = ({isLogin, onAuthenticate}) => {
@@ -21,10 +24,14 @@ const AuthContent: React.FC<IAuthContent> = ({isLogin, onAuthenticate}) => {
     });
 
     // Params
+    const navigation = useNavigation<NativeStackNavigationProp<any>>();
 
     // Functions
     function switchAuthModeHandler() {
-        // Todo
+        if (isLogin)
+            navigation.replace("SignUp");
+        else
+            navigation.replace("Login");
     }
 
     function submitHandler(credentials: Credentials) {
@@ -80,9 +87,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 32,
         padding: 16,
         borderRadius: 8,
-        backgroundColor: Colors.primary800,
+        backgroundColor: Colors.dark,
         elevation: 2,
-        shadowColor: 'black',
+        shadowColor: Colors.dark,
         shadowOffset: {width: 1, height: 1},
         shadowOpacity: 0.35,
         shadowRadius: 4,

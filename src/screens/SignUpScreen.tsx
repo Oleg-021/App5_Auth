@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import AuthContent from "../components/auth/AuthContent";
 import {createUser} from "../util/auth";
 import {LoadingOverlay} from "../components/ui";
+import {Alert} from "react-native";
 
 interface ISignUpScreen {
 }
@@ -14,7 +15,11 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
     // Functions
     const signUpHandler = async ({email, password}: { email: string, password: string }) => {
         setIsAuthenticating(true);
-        await createUser(email, password);
+        try {
+            await createUser(email, password);
+        } catch (error) {
+            Alert.alert("Authentication failed", "Could not create user. Check your input and try again later.");
+        }
         setIsAuthenticating(false);
     }
 

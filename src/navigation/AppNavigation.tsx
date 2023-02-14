@@ -2,15 +2,18 @@ import React from "react";
 import {NavigationContainer} from "@react-navigation/native";
 
 import AuthStack from "./AuthStack";
+import AuthContextProvider from "../store/auth-context";
 
 interface IAppNavigation {
 }
 
 const AppNavigation: React.FC<IAppNavigation> = () => {
     return (
-        <NavigationContainer>
-            <AuthStack/>
-        </NavigationContainer>
+        <AuthContextProvider>
+            <NavigationContainer>
+                <AuthStack/>
+            </NavigationContainer>
+        </AuthContextProvider>
     );
 }
 

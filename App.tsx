@@ -7,7 +7,7 @@ import Main from "./src/screens/Main";
 
 function App(): JSX.Element {
     return <>
-        <StatusBar backgroundColor={Colors.dark} barStyle="light-content"/>
+        <StatusBar backgroundColor={Colors.yellow} barStyle="dark-content"/>
 
         <AuthContextProvider>
             <Main/>

@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, StatusBar, StyleSheet, Text, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {AuthContext} from "../store/auth-context";
@@ -37,7 +37,7 @@ const Main: React.FC<IRoot> = () => {
         // While upload app data...
     }
 
-    if (!isLetsStart)
+    if (!isLetsStart && !authContext.token && !isTryingLogIn)
         return (
             <View style={styles.container}>
                 <TextLogo text="Litvinowser" color={Colors.dark} size={55} animationDuration={1500}/>
@@ -54,7 +54,11 @@ const Main: React.FC<IRoot> = () => {
             </View>
         );
     else
-        return <AppNavigation/>
+        return <>
+            <StatusBar backgroundColor={Colors.dark} barStyle="light-content"/>
+
+            <AppNavigation/>
+        </>
 }
 
 const styles = StyleSheet.create({
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: Colors.yellow,
-        padding: "5%"
+        padding: "10%"
     },
     logoImg: {
         width: 250,

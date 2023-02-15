@@ -7,7 +7,7 @@ const API_KEY = "AIzaSyCi86_ZNK_dR5DbeodJrx5siuEchjrpzt0"; // ExpenseTracker API
     - password: string,
     - returnSecureToken: boolean
  */
-const authenticate = async (mode: "signUp" | "signInWithPassword", email: string, password: string) => {
+const authenticate = async (mode: "signUp" | "signInWithPassword", email: string, password: string): Promise<string> => {
     const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`;
 
     const response = await axios.post(url, {
@@ -16,15 +16,15 @@ const authenticate = async (mode: "signUp" | "signInWithPassword", email: string
         returnSecureToken: true
     });
 
-    console.log(response.data);
+    return response.data.idToken; // returning auth token
 }
 
-const createUser = async (email: string, password: string) => {
-    await authenticate("signUp", email, password);
+const createUser = (email: string, password: string) => {
+    return authenticate("signUp", email, password);
 }
 
-const logIn = async (email: string, password: string) => {
-    await authenticate("signInWithPassword", email, password);
+const logIn = (email: string, password: string) => {
+    return authenticate("signInWithPassword", email, password);
 }
 
 export {createUser, logIn};

@@ -1,4 +1,5 @@
 import React, {createContext, useState} from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // Interfaces
 interface IAuthContext {
@@ -13,8 +14,7 @@ interface IAuthContextProvider {
 }
 
 /** Context logic... */
-
-// 1. Creating context
+/** 1. Creating context */
 const AuthContext = createContext<IAuthContext>({
     token: "",
     isAuthenticated: false,
@@ -22,17 +22,24 @@ const AuthContext = createContext<IAuthContext>({
     logout: () => {}
 });
 
-// 2. Making context provider for managing context state
+/** 2. Making context provider for managing context state */
 const AuthContextProvider: React.FC<IAuthContextProvider> = ({children}) => {
+    // State
     const [authToken, setAuthToken] = useState<string>();
+
+    // Functions
     const authenticate = (token: string) => {
         setAuthToken(token);
-    }
-    const logout = () => {
-        setAuthToken(undefined);
+        AsyncStorage.setItem("token", token);
     }
 
-    // 3. Constructing value for context provider
+    const logout = () => {
+        setAuthToken(undefined);
+        AsyncStorage.removeItem("token");
+    }
+
+    // Render
+    /** 3. Constructing value for context provider */
     const value: IAuthContext = {
         token: authToken,
         isAuthenticated: !!authToken,

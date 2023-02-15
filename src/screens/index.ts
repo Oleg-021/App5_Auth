@@ -1,5 +1,5 @@
-import WelcomeScreen from "./WelcomeScreen";
-import LoginScreen from "./LoginScreen";
-import SignUpScreen from "./SignUpScreen";
+import WelcomeScreen from "./app/WelcomeScreen";
+import LoginScreen from "./auth/LoginScreen";
+import SignUpScreen from "./auth/SignUpScreen";
 
 export {WelcomeScreen, LoginScreen, SignUpScreen};

@@ -5,7 +5,7 @@ import {createUser} from "../../util/axios/auth";
 import {LoadingOverlay} from "../../components/ui";
 import {Alert} from "react-native";
 import {AuthContext} from "../../store/auth-context";
-import {AnimatedOpacityView} from "../../components/animated";
+import {AnimatedBottomAppearanceView} from "../../components/animated";
 
 interface ISignUpScreen {
 }
@@ -34,9 +34,9 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
         return <LoadingOverlay message="Creating user..."/>
 
     return <>
-        <AnimatedOpacityView animationDuration={2000}>
+        <AnimatedBottomAppearanceView animationDuration={2000}>
             <AuthContent isLogin={false} onAuthenticate={signUpHandler}/>
-        </AnimatedOpacityView>
+        </AnimatedBottomAppearanceView>
     </>;
 }
 

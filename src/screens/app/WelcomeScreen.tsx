@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 import axios from "axios";
 
 import {AuthContext} from "../../store/auth-context";
+import {Colors} from "../../util/constants/Colors";
 
 interface IWelcomeScreen {
 }
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: Colors.yellow,
         padding: 32,
     },
     title: {

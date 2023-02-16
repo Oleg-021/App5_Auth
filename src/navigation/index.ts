@@ -1,5 +1,5 @@
 import AppNavigation from "./AppNavigation";
 import AuthStack from "./AuthStack";
-import AuthenticatedStack from "./AuthenticatedStack";
+import DashBoardTab from "./DashBoardTab";
 
-export {AppNavigation, AuthStack, AuthenticatedStack};
+export {AppNavigation, AuthStack, DashBoardTab};

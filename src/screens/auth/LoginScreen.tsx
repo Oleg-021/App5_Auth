@@ -5,7 +5,7 @@ import {LoadingOverlay} from "../../components/ui";
 import {logIn} from "../../util/axios/auth";
 import {Alert} from "react-native";
 import {AuthContext} from "../../store/auth-context";
-import {AnimatedOpacityView} from "../../components/animated";
+import {AnimatedBottomAppearanceView} from "../../components/animated";
 
 interface ILoginScreen {
 }
@@ -34,9 +34,9 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
         return <LoadingOverlay message="Logging you in..."/>
 
     return (
-        <AnimatedOpacityView animationDuration={1500}>
+        <AnimatedBottomAppearanceView animationDuration={2000}>
             <AuthContent isLogin={true} onAuthenticate={signInHandler}/>
-        </AnimatedOpacityView>
+        </AnimatedBottomAppearanceView>
     );
 }
 

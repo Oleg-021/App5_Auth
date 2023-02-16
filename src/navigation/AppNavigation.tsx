@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {NavigationContainer} from "@react-navigation/native";
 
 import {AuthContext} from "../store/auth-context";
-import {AuthenticatedStack, AuthStack} from "./index";
+import {DashBoardTab, AuthStack} from "./index";
 
 interface IAppNavigation {
 }
@@ -12,7 +12,7 @@ const AppNavigation: React.FC<IAppNavigation> = () => {
 
     return (
         <NavigationContainer>
-            {authContext.isAuthenticated ? <AuthenticatedStack/> : <AuthStack/>}
+            {authContext.isAuthenticated ? <DashBoardTab/> : <AuthStack/>}
         </NavigationContainer>
     );
 }

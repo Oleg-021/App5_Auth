@@ -10,7 +10,7 @@ interface ILogo {
 const Logo: React.FC<ILogo> = () => {
     return (
         <View style={styles.logoContainer}>
-            <Ionicons name="desktop-outline" size={100} color={Colors.accent500}/>
+            <Ionicons name="desktop-outline" size={100} color={Colors.gray500}/>
             <Text style={styles.logoText}>Litvinowser</Text>
         </View>
     );
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     logoText: {
-        color: Colors.accent500,
+        color: Colors.gray500,
         fontSize: 33,
         fontWeight: "bold",
     }

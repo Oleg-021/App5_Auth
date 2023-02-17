@@ -39,7 +39,7 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
             <Logo/>
         </AnimatedOpacityView>
 
-        <AnimatedBottomAppearanceView animationDuration={2000}>
+        <AnimatedBottomAppearanceView animationDuration={2500}>
             <AuthContent isLogin={false} onAuthenticate={signUpHandler}/>
         </AnimatedBottomAppearanceView>
     </>;

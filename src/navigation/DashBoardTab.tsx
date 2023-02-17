@@ -16,31 +16,34 @@ const Tab = createBottomTabNavigator();
 const DashBoardTab: React.FC<IDashBoardTab> = () => {
     const authContext = useContext(AuthContext);
 
-    return (
+    return <>
         <Tab.Navigator screenOptions={{
-            headerStyle: {backgroundColor: Colors.dark},
+            headerStyle: {backgroundColor: Colors.gray500},
             headerTintColor: Colors.white,
-            tabBarStyle: {backgroundColor: Colors.dark, borderTopWidth: 0, borderBottomWidth: 0},
-            tabBarActiveTintColor: Colors.yellow,
-            tabBarInactiveTintColor: Colors.lightGray,
+            tabBarStyle: {backgroundColor: Colors.gray500, borderTopWidth: 0, borderBottomWidth: 0},
+            tabBarActiveTintColor: Colors.yellow500,
+            tabBarInactiveTintColor: Colors.gray200,
         }}>
             <Tab.Screen name="Welcome"
                         component={WelcomeScreen}
                         options={{
-                            headerRight: ({tintColor}) => <IconButton icon="exit" color={tintColor || Colors.yellow}
+                            headerRight: ({tintColor}) => <IconButton icon="exit" color={tintColor || Colors.yellow500}
                                                                       size={24} onPress={authContext.logout}/>,
-                            tabBarIcon: ({color, size}) => <Ionicons name="hand-right-outline" color={color} size={size}/>
+                            tabBarIcon: ({color, size}) => <Ionicons name="hand-right-outline" color={color}
+                                                                     size={size}/>
                         }}
             />
             <Tab.Screen name="Guess number"
                         component={GuessNumberApp}
                         options={{
-                            tabBarIcon: ({color, size}) => <Ionicons name="game-controller-outline" color={color} size={size}/>
+                            tabBarIcon: ({color, size}) => <Ionicons name="game-controller-outline" color={color}
+                                                                     size={size}/>,
+                            headerShown: false
                         }}
 
             />
         </Tab.Navigator>
-    );
+    </>;
 }
 
 export default DashBoardTab;

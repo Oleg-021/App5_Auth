@@ -42,7 +42,7 @@ const GuessNumberApp: React.FC<IGuessNumberApp> = () => {
     return (
         <>
             <StatusBar backgroundColor={"rgb(35,35,35)"}/>
-            <LinearGradient style={styles.rootScreen} colors={[Colors.game.darkCherry, Colors.yellow]}>
+            <LinearGradient style={styles.rootScreen} colors={[Colors.game.darkCherry, Colors.game.yellow]}>
                 <ImageBackground source={require("../../../assets/img/game/background.png")}
                                  resizeMode="cover"
                                  style={styles.rootScreen}

@@ -26,13 +26,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: Colors.accent500,
+        backgroundColor: Colors.gray500,
         width: 350,
         padding: 15,
         borderRadius: 10
     },
     buttonText: {
-        color: Colors.text,
+        color: Colors.white,
         fontSize: 21,
         fontWeight: "bold"
     },

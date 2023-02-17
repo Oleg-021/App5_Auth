@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {AuthContext} from "../store/auth-context";
 import {AppNavigation} from "../navigation";
-import {appBarStyle, Colors} from "../util/constants/Colors";
+import {Colors} from "../util/constants/Colors";
 import {AnimatedOpacityView, LetsStartButton, TextLogo} from "../components/animated";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -41,10 +41,10 @@ const Main: React.FC<IRoot> = () => {
     if (!isLetsStart && !authContext.token && !isTryingLogIn)
         return (
             <View style={styles.container}>
-                <TextLogo text="Litvinowser" color={Colors.accent500} size={55} animationDuration={1500}/>
+                <TextLogo text="Litvinowser" color={Colors.gray500} size={55} animationDuration={1500}/>
 
                 <AnimatedOpacityView animationDuration={1800}>
-                    <Ionicons name="desktop-outline" size={300} color={Colors.accent500}/>
+                    <Ionicons name="desktop-outline" size={300} color={Colors.gray500}/>
                 </AnimatedOpacityView>
 
                 <AnimatedOpacityView animationDuration={2000}>
@@ -59,7 +59,7 @@ const Main: React.FC<IRoot> = () => {
         // logo-buffer
     else
         return <>
-            <StatusBar backgroundColor={Colors.accent500} barStyle={appBarStyle}/>
+            <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>
 
             <AppNavigation/>
         </>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: Colors.primary500,
+        backgroundColor: Colors.yellow500,
         padding: "10%"
     },
     logoImg: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         height: 250
     },
     description: {
-        color: Colors.accent500,
+        color: Colors.gray500,
         fontSize: 20,
         fontStyle: "italic"
     },

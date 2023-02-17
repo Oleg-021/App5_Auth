@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderWidth: 4,
-        borderColor: Colors.yellow,
+        borderColor: Colors.yellow200,
         borderRadius: 10,
         padding: deviceWidth < 380 ? 12 : 24,
         margin: deviceWidth < 380 ? 12 : 24
     },
     numberText: {
-        color: Colors.yellow,
+        color: Colors.yellow200,
         fontSize: deviceWidth < 380 ? 28 : 36,
         fontWeight: "bold"
     }

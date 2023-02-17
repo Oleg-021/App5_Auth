@@ -19,13 +19,13 @@ const WelcomeScreen: React.FC<IWelcomeScreen> = () => {
             .then(response => setMessage(response.data));
     }, [token]);
 
-    return (
+    return <>
         <View style={styles.container}>
             <Text style={styles.title}>Welcome!</Text>
             <Text>You authenticated successfully!</Text>
             <Text>{message}</Text>
         </View>
-    );
+    </>;
 }
 
 const styles = StyleSheet.create({
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.yellow500,
         padding: 32,
     },
     title: {

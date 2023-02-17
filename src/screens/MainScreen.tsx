@@ -11,7 +11,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 interface IRoot {
 }
 
-const Main: React.FC<IRoot> = () => {
+const MainScreen: React.FC<IRoot> = () => {
     // State
     const [isTryingLogIn, setIsTryingLogIn] = useState(true);
     const [isLetsStart, setIsLetsStart] = useState(false);
@@ -35,7 +35,7 @@ const Main: React.FC<IRoot> = () => {
 
     // Render
     if (isTryingLogIn) {
-        // While upload app data...
+        // While upload dashboard dashboard...
     }
 
     if (!isLetsStart && !authContext.token && !isTryingLogIn)
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Main;
+export default MainScreen;

@@ -6,7 +6,8 @@ import {Colors} from "../util/constants/Colors";
 import {WelcomeScreen} from "../screens";
 import {IconButton} from "../components/ui";
 import {AuthContext} from "../store/auth-context";
-import GuessNumberApp from "../screens/app/game/GuessNumberApp";
+import GuessNumberApp from "../screens/dashboard/game/GuessNumberApp";
+import RecipesNavigationStack from "./recipes/RecipesNavigationStack";
 
 interface IDashBoardTab {
 }
@@ -33,14 +34,21 @@ const DashBoardTab: React.FC<IDashBoardTab> = () => {
                                                                      size={size}/>
                         }}
             />
-            <Tab.Screen name="Guess number"
+            <Tab.Screen name="Game"
                         component={GuessNumberApp}
                         options={{
                             tabBarIcon: ({color, size}) => <Ionicons name="game-controller-outline" color={color}
                                                                      size={size}/>,
                             headerShown: false
                         }}
-
+            />
+            <Tab.Screen name="Recipes"
+                        component={RecipesNavigationStack}
+                        options={{
+                            tabBarIcon: ({color, size}) => <Ionicons name="pizza-outline" color={color}
+                                                                     size={size}/>,
+                            headerShown: false
+                        }}
             />
         </Tab.Navigator>
     </>;

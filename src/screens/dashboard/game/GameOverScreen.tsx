@@ -1,7 +1,7 @@
 import React from "react";
 import {Image, ScrollView, StyleSheet, Text, useWindowDimensions, View} from "react-native";
 
-import {PrimaryButton, Title} from "../../../components/app/game/ui";
+import {PrimaryButton, Title} from "../../../components/dashboard/game/ui";
 import {Colors} from "../../../util/constants/Colors";
 
 interface IGameOverScreen {

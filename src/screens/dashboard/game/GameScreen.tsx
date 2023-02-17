@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {Alert, FlatList, StyleSheet, Text, useWindowDimensions, View} from "react-native";
 
-import {GuessLogItem, NumberContainer} from "../../../components/app/game";
-import {Card, PrimaryButton, Title} from "../../../components/app/game/ui";
+import {GuessLogItem, NumberContainer} from "../../../components/dashboard/game";
+import {Card, PrimaryButton, Title} from "../../../components/dashboard/game/ui";
 
 function generateRandomBetween(min: number, max: number, exclude: number): number {
     const rndNum = Math.floor(Math.random() * (max - min)) + min;

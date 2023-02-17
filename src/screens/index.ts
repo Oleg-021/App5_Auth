@@ -1,4 +1,4 @@
-import WelcomeScreen from "./app/WelcomeScreen";
+import WelcomeScreen from "./dashboard/WelcomeScreen";
 import LoginScreen from "./auth/LoginScreen";
 import SignUpScreen from "./auth/SignUpScreen";
 

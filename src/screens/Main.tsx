@@ -1,11 +1,12 @@
 import React, {useContext, useEffect, useState} from "react";
-import {Image, StatusBar, StyleSheet, Text, View} from "react-native";
+import {StatusBar, StyleSheet, Text, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {AuthContext} from "../store/auth-context";
 import {AppNavigation} from "../navigation";
-import {Colors} from "../util/constants/Colors";
+import {appBarStyle, Colors} from "../util/constants/Colors";
 import {AnimatedOpacityView, LetsStartButton, TextLogo} from "../components/animated";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 interface IRoot {
 }
@@ -40,10 +41,10 @@ const Main: React.FC<IRoot> = () => {
     if (!isLetsStart && !authContext.token && !isTryingLogIn)
         return (
             <View style={styles.container}>
-                <TextLogo text="Litvinowser" color={Colors.dark} size={55} animationDuration={1500}/>
+                <TextLogo text="Litvinowser" color={Colors.accent500} size={55} animationDuration={1500}/>
 
                 <AnimatedOpacityView animationDuration={1800}>
-                    <Image style={styles.logoImg} source={require("../assets/img/main_logo.png")}/>
+                    <Ionicons name="desktop-outline" size={300} color={Colors.accent500}/>
                 </AnimatedOpacityView>
 
                 <AnimatedOpacityView animationDuration={2000}>
@@ -53,9 +54,12 @@ const Main: React.FC<IRoot> = () => {
                 <LetsStartButton animationDuration={2500} onPress={letsStartHandler}/>
             </View>
         );
+        // desktop-outline
+        // logo-electron
+        // logo-buffer
     else
         return <>
-            <StatusBar backgroundColor={Colors.dark} barStyle="light-content"/>
+            <StatusBar backgroundColor={Colors.accent500} barStyle={appBarStyle}/>
 
             <AppNavigation/>
         </>
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.primary500,
         padding: "10%"
     },
     logoImg: {
@@ -74,7 +78,7 @@ const styles = StyleSheet.create({
         height: 250
     },
     description: {
-        color: Colors.gray,
+        color: Colors.accent500,
         fontSize: 20,
         fontStyle: "italic"
     },

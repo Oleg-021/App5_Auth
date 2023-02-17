@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {View, StyleSheet, Alert} from "react-native";
-import {ParamListBase, useNavigation} from "@react-navigation/native";
+import {useNavigation} from "@react-navigation/native";
 
 import {CredentialsInvalid} from "../../util/types/CredentialsInvalid";
 import {Credentials} from "../../util/types/Credentials";
@@ -83,13 +83,13 @@ const AuthContent: React.FC<IAuthContent> = ({isLogin, onAuthenticate}) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 64,
+        marginTop: 10,
         marginHorizontal: 32,
         padding: 16,
         borderRadius: 8,
-        backgroundColor: Colors.dark,
+        backgroundColor: Colors.accent500,
         elevation: 2,
-        shadowColor: Colors.dark,
+        shadowColor: Colors.accent500,
         shadowOffset: {width: 1, height: 1},
         shadowOpacity: 0.35,
         shadowRadius: 4,

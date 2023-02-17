@@ -1,11 +1,12 @@
 import React, {useContext, useState} from "react";
+import {Alert} from "react-native";
 
 import {AuthContent} from "../../components/auth";
 import {LoadingOverlay} from "../../components/ui";
 import {logIn} from "../../util/axios/auth";
-import {Alert} from "react-native";
 import {AuthContext} from "../../store/auth-context";
-import {AnimatedBottomAppearanceView} from "../../components/animated";
+import {AnimatedBottomAppearanceView, AnimatedOpacityView} from "../../components/animated";
+import Logo from "../../components/auth/Logo";
 
 interface ILoginScreen {
 }
@@ -33,11 +34,16 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
     if (isAuthenticating)
         return <LoadingOverlay message="Logging you in..."/>
 
-    return (
+    return <>
+        <AnimatedOpacityView animationDuration={1500}>
+            <Logo/>
+        </AnimatedOpacityView>
+
         <AnimatedBottomAppearanceView animationDuration={2000}>
             <AuthContent isLogin={true} onAuthenticate={signInHandler}/>
         </AnimatedBottomAppearanceView>
-    );
+    </>
+
 }
 
 export default LoginScreen;

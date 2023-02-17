@@ -31,7 +31,7 @@ const TextLogo: React.FC<ITextLogo> = ({text, size, color, animationDuration}) =
 
 const styles = StyleSheet.create({
     text: {
-        color: Colors.dark,
+        color: Colors.accent700,
         fontSize: 30,
         fontWeight: "bold",
     }

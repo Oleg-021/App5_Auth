@@ -23,7 +23,7 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
         setIsAuthenticating(true);
         try {
             const token = await logIn(email, password);
-            authContext.authenticate(token);
+            authContext.authenticate(token, email);
         } catch (error) {
             Alert.alert("Authentication failed!", "Could not log you in. Check your credentials. or try again later");
             setIsAuthenticating(false);

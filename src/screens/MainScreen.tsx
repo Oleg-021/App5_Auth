@@ -26,9 +26,14 @@ const MainScreen: React.FC<IRoot> = () => {
 
     // Effects
     useEffect(() => {
-        AsyncStorage.getItem("token").then(storedToken => {
+        AsyncStorage.getItem("token").then( async (storedToken) => {
+            let email = await AsyncStorage.getItem("email");
+
+            if (!email)
+                email = "";
+
             if (storedToken)
-                authContext.authenticate(storedToken);
+                authContext.authenticate(storedToken, email);
             setIsTryingLogIn(false);
         });
     }, []);

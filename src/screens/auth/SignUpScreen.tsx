@@ -23,7 +23,7 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
         setIsAuthenticating(true);
         try {
             const token = await createUser(email, password);
-            authContext.authenticate(token);
+            authContext.authenticate(token, email);
         } catch (error) {
             Alert.alert("Authentication failed", "Could not create user. Check your input and try again later.");
             setIsAuthenticating(false);

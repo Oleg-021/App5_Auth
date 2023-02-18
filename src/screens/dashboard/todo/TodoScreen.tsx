@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {SafeAreaView, StyleSheet, View} from "react-native";
 import {RouteProp, useRoute} from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -8,42 +8,18 @@ import {TodoTask} from "../../../models/todo/TodoTask";
 import {TaskPriority} from "../../../models/todo/TaskPriority";
 import {AddTaskButton, TaskList} from "../../../components/dashboard/todo";
 import {Colors} from "../../../util/constants/Colors";
+import {AuthContext} from "../../../store/auth-context";
 
 type PropsType = {};
 
 const TodoScreen: React.FC<PropsType> = () => {
-    /* Params */
-    const route = useRoute<RouteProp<any>>();
-
     /* State */
     const [taskList, setTaskList] = useState([] as TodoTask[]);
     const [lastId, setLastId] = useState(1);
 
-    /* Effects */
-    useEffect(() => {
-        AsyncStorage.getItem("todoList").then((todoList) => {
-            if (todoList) {
-                setTaskList(JSON.parse(todoList));
-            }
-        });
-    }, []);
-
-    useEffect(() => {
-        if (taskList.length > 0)
-            setLastId(taskList[taskList.length - 1].id + 1);
-        else
-            setLastId(1);
-
-        AsyncStorage.setItem("todoList", JSON.stringify(taskList));
-    }, [taskList])
-
-    useEffect(() => {
-        // @ts-ignore
-        if (route.params && route.params.newTask) {
-            // @ts-ignore
-            addItem(route.params.newTask)
-        }
-    }, [route]);
+    /* Params */
+    const route = useRoute<RouteProp<any>>();
+    const authContext = useContext(AuthContext);
 
     /* Functions */
     const addItem = (task: TodoTask) => {
@@ -115,6 +91,29 @@ const TodoScreen: React.FC<PropsType> = () => {
             ];
         });
     }
+
+    /* Effects */
+    useEffect(() => {
+        AsyncStorage.getItem(`todoList-${authContext.email}`).then((todoList) => {
+            if (todoList) {
+                setTaskList(JSON.parse(todoList));
+            }
+        });
+    }, []);
+
+    useEffect(() => {
+        if (taskList.length > 0)
+            setLastId(taskList[taskList.length - 1].id + 1);
+        else
+            setLastId(1);
+
+        AsyncStorage.setItem(`todoList-${authContext}`, JSON.stringify(taskList));
+    }, [taskList])
+
+    useEffect(() => {
+        if (route.params && route.params.newTask)
+            addItem(route.params.newTask)
+    }, [route]);
 
     const outputTaskList = [...taskList];
     outputTaskList.sort((current, next) => current.done > next.done ? 1 : current.done === next.done ? 0 : -1);

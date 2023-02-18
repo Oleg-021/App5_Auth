@@ -14,6 +14,9 @@ export let Colors = {
     error50: "#fcbfbf",
     error500: "#ff4e4e",
 
+    notSuccess: "#82a6a1",
+    success: "#48cc80",
+
     game: {
         white: "#ffffff",
         cherry: "#72063c",

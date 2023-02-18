@@ -9,6 +9,7 @@ import {AuthContext} from "../store/auth-context";
 import GuessNumberApp from "../screens/dashboard/game/GuessNumberApp";
 import RecipesNavigationStack from "./recipes/RecipesNavigationStack";
 import ExpensesNavigationStack from "./expenses/ExpensesNavigationStack";
+import TodoNavigationStack from "./todo/TodoNavigationStack";
 
 interface IDashBoardTab {
 }
@@ -60,6 +61,13 @@ const DashBoardTab: React.FC<IDashBoardTab> = () => {
                             tabBarIcon: ({color, size}) => <Ionicons name="card-outline" color={color}
                                                                      size={size}/>,
                             headerShown: false
+                        }}
+            />
+            <Tab.Screen name="TodoApp"
+                        component={TodoNavigationStack}
+                        options={{
+                            tabBarIcon: ({color, size}) => <Ionicons name="list" color={color}
+                                                                     size={size}/>,
                         }}
             />
         </Tab.Navigator>

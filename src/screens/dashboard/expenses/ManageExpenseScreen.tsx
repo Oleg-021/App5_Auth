@@ -1,5 +1,5 @@
 import React, {useContext, useLayoutEffect, useState} from "react";
-import {StyleSheet, View} from "react-native";
+import {StatusBar, StyleSheet, View} from "react-native";
 import {NavigationProp, RouteProp} from "@react-navigation/native";
 
 import {ExpensesContext} from "../../../store/expenses/expenses-context";
@@ -74,7 +74,9 @@ const ManageExpenseScreen: React.FC<IManageExpenseScreen> = ({navigation, route}
     if (isSubmitting)
         return <LoadingOverlay/>
 
-    return (
+    return <>
+        <StatusBar backgroundColor={Colors.yellow500} barStyle="dark-content"/>
+
         <View style={styles.container}>
             <ExpenseForm onCancel={cancelHandler}
                          onSubmit={confirmHandler}
@@ -87,7 +89,7 @@ const ManageExpenseScreen: React.FC<IManageExpenseScreen> = ({navigation, route}
                     <IconButton icon="trash" size={36} color={Colors.error500} onPress={deleteExpenseHandler}/>
                 </View>}
         </View>
-    );
+    </>;
 }
 
 const styles = StyleSheet.create({

@@ -27,4 +27,12 @@ const logIn = (email: string, password: string) => {
     return authenticate("signInWithPassword", email, password);
 }
 
-export {createUser, logIn};
+const getUserData = async (token: string = "") => {
+    const url = `https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${API_KEY}`;
+
+    return await axios.post(url, {
+        idToken: token
+    });
+}
+
+export {createUser, logIn, getUserData};

@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         marginTop: deviceWidth < 380 ? 18 : 36,
         marginHorizontal: 24,
         padding: 16,
-        backgroundColor: Colors.game.darkCherry,
+        backgroundColor: Colors.gray500,
         borderRadius: 8,
         elevation: 8, // shadow styling for android
         shadowColor: "black", // shadow styling for ios

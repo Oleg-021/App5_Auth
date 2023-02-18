@@ -41,6 +41,7 @@ const RecentExpensesScreen: React.FC<IRecentExpenseScreen> = () => {
         getExpenses().catch(err => console.log(err));
     }, [])
 
+    // Render
     if (error && !isFetching)
         return <ErrorOverlay message={error} onConfirm={errorHandler}/>
 

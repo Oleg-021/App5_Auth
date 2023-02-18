@@ -7,7 +7,8 @@ import GameScreen from "./GameScreen";
 import GameOverScreen from "./GameOverScreen";
 import {Colors} from "../../../util/constants/Colors";
 
-interface IGuessNumberApp {}
+interface IGuessNumberApp {
+}
 
 const GuessNumberApp: React.FC<IGuessNumberApp> = () => {
     const [userNumber, setUserNumber] = useState<number>();
@@ -39,20 +40,19 @@ const GuessNumberApp: React.FC<IGuessNumberApp> = () => {
         screen =
             <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={startNewGameHandler}/>;
 
-    return (
-        <>
-            <StatusBar backgroundColor={"rgb(35,35,35)"}/>
-            <LinearGradient style={styles.rootScreen} colors={[Colors.game.darkCherry, Colors.game.yellow]}>
-                <ImageBackground source={require("../../../assets/img/game/background.png")}
-                                 resizeMode="cover"
-                                 style={styles.rootScreen}
-                                 imageStyle={styles.backgroundImage}
-                >
-                    <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-                </ImageBackground>
-            </LinearGradient>
-        </>
-    );
+    return <>
+        <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>
+
+        <LinearGradient style={styles.rootScreen} colors={[Colors.gray500, Colors.yellow500]}>
+            <ImageBackground source={require("../../../assets/img/game/background.png")}
+                             resizeMode="cover"
+                             style={styles.rootScreen}
+                             imageStyle={styles.backgroundImage}
+            >
+                <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+            </ImageBackground>
+        </LinearGradient>
+    </>;
 }
 
 const styles = StyleSheet.create({

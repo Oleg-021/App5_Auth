@@ -76,20 +76,21 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     instructionText: {
-        color: Colors.game.yellow,
+        color: Colors.yellow500,
         fontSize: 24
     },
     numberInput: {
         height: 50,
         width: 50,
-        color: Colors.game.yellow,
+        color: Colors.yellow500,
         fontSize: 32,
         fontWeight: "bold",
-        borderBottomColor: Colors.game.yellow,
+        borderBottomColor: Colors.yellow500,
         borderBottomWidth: 2,
         marginVertical: 8,
         marginRight: 16,
-        textAlign: "center"
+        textAlign: "center",
+        padding: 5
     },
     buttonsContainer: {
         flexDirection: "row"

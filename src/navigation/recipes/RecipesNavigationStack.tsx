@@ -1,6 +1,7 @@
 import React from "react";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {Provider} from "react-redux";
+import {StatusBar} from "react-native";
 
 import {store} from "../../store/recipes/store";
 import {MealDetailsScreen, MealsOverviewScreen} from "../../screens/dashboard/recipes";
@@ -14,6 +15,8 @@ const Stack = createNativeStackNavigator();
 
 const RecipesNavigationStack: React.FC<IRecipesNavigationStack> = () => {
     return <>
+        <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>
+
         <Provider store={store}>
             <Stack.Navigator screenOptions={{
                 headerStyle: {backgroundColor: Colors.gray500},

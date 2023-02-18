@@ -14,7 +14,7 @@ const InstructionText: React.FC<IInstructionText> = ({children, style}) => {
 
 const styles = StyleSheet.create({
     instructionText: {
-        color: Colors.game.yellow,
+        color: Colors.yellow500,
         fontSize: 24
     },
 });

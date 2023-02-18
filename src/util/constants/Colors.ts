@@ -19,8 +19,15 @@ export let Colors = {
 
     game: {
         white: "#ffffff",
+        cherry: "#494949",
+        darkCherry: "#262626",
+        yellow: "#ddb52f"
+    }
+
+    /*game: {
+        white: "#ffffff",
         cherry: "#72063c",
         darkCherry: "#4e0329",
         yellow: "#ddb52f"
-    }
+    }*/
 }

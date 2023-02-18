@@ -12,12 +12,12 @@ const Title: React.FC<ITitle> = ({children}) => {
 
 const styles = StyleSheet.create({
     title: {
-        color: Platform.select({android: Colors.game.yellow, ios: Colors.game.white}),
+        color: Platform.select({android: Colors.yellow500, ios: Colors.yellow200}),
         fontSize: 24,
         fontWeight: "bold",
         textAlign: "center",
         borderWidth: 3,
-        borderColor: Platform.OS === "android" ? Colors.game.yellow : Colors.game.white,
+        borderColor: Platform.OS === "android" ? Colors.yellow500 : Colors.yellow200,
         borderRadius: 10,
         padding: 12,
         width: 300,

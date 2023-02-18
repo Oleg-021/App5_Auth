@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     listItem: {
         flexDirection: "row",
         justifyContent: "space-between",
-        borderColor: Colors.game.darkCherry,
+        borderColor: Colors.gray500,
         borderWidth: 1,
         borderRadius: 40,
         padding: 12,

@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
         overflow: "hidden"
     },
     buttonInnerContainer: {
-        backgroundColor: Colors.game.cherry,
+        backgroundColor: Colors.gray400,
         paddingVertical: 8,
         paddingHorizontal: 16,
         elevation: 2
     },
     buttonText: {
-        color: "white",
+        color: Colors.yellow200,
         textAlign: "center"
     },
     pressed: {

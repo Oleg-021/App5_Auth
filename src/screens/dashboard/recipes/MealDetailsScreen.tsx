@@ -4,7 +4,7 @@ import {NavigationProp, RouteProp} from "@react-navigation/native";
 import {useDispatch, useSelector} from "react-redux";
 
 import {MEALS} from "../../../assets/dashboard/recipes/dummy-data";
-import Meal from "../../../model/recipes/models/Meal";
+import Meal from "../../../models/recipes/models/Meal";
 import {addFavorite, removeFavorites} from "../../../store/recipes/favorites";
 import IconButton from "../../../components/dashboard/recipes/IconButton";
 import MealDetails from "../../../components/dashboard/recipes/MealDetails";

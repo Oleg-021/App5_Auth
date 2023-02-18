@@ -2,7 +2,7 @@ import React from "react";
 import {FlatList, ListRenderItemInfo, StyleSheet, View} from "react-native";
 
 import MealItem from "./MealItem";
-import Meal from "../../../../model/recipes/models/Meal";
+import Meal from "../../../../models/recipes/models/Meal";
 
 interface IMealsList {
     displayedMeals: Meal[]

@@ -2,7 +2,7 @@ import React from "react";
 import {FlatList, ListRenderItemInfo, View} from "react-native";
 import {NavigationProp} from "@react-navigation/native";
 
-import Category from "../../../model/recipes/models/Category";
+import Category from "../../../models/recipes/models/Category";
 import CategoryGridTile from "../../../components/dashboard/recipes/CategoryGridTile";
 import {CATEGORIES} from "../../../assets/dashboard/recipes/dummy-data";
 

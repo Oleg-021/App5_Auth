@@ -7,6 +7,7 @@ export let Colors = {
     yellow700: "#ff9f00",
 
     gray200: "#c2c2c2",
+    gray400: "#494949",
     gray500: "#2b2b2b",
     gray700: "#131313",
 

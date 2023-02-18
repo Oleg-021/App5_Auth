@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {View, StyleSheet, Alert} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 
-import {CredentialsInvalid} from "../../util/types/CredentialsInvalid";
-import {Credentials} from "../../util/types/Credentials";
+import {CredentialsInvalid} from "../../models/auth/CredentialsInvalid";
+import {Credentials} from "../../models/auth/Credentials";
 import {Colors} from "../../util/constants/Colors";
 import {FlatButton} from "../ui";
 import AuthForm from "./AuthForm";

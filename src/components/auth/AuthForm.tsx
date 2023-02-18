@@ -3,8 +3,8 @@ import {StyleSheet, View} from "react-native";
 
 import {Button} from "../ui";
 import Input from "./Input";
-import {CredentialsInvalid} from "../../util/types/CredentialsInvalid";
-import {Credentials} from "../../util/types/Credentials";
+import {CredentialsInvalid} from "../../models/auth/CredentialsInvalid";
+import {Credentials} from "../../models/auth/Credentials";
 
 interface IAuthForm {
     isLogin: boolean,

@@ -20,7 +20,6 @@ const RecipesDrawer: React.FC<IRecipesDrawer> = () => {
             drawerActiveTintColor: Colors.gray500,
             drawerActiveBackgroundColor: Colors.yellow500,
             drawerInactiveTintColor: "white"
-
         }}>
             <Drawer.Screen name="Categories"
                            component={CategoriesScreen}

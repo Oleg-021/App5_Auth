@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import {SafeAreaView, StyleSheet, View} from "react-native";
+import {Pressable, SafeAreaView, StyleSheet, View} from "react-native";
 import {RouteProp, useRoute} from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -92,6 +92,10 @@ const TodoScreen: React.FC<PropsType> = () => {
         });
     }
 
+    const scheduleNotificationHandler = () => {
+        // TODO notification
+    }
+
     /* Effects */
     useEffect(() => {
         AsyncStorage.getItem(`todoList-${authContext.email}`).then((todoList) => {
@@ -121,7 +125,9 @@ const TodoScreen: React.FC<PropsType> = () => {
     return (
         <SafeAreaView style={styles.body}>
             <View style={styles.app}>
-                <Ionicons name="list" size={50} color={Colors.gray500}/>
+                <Pressable style={({pressed}) => pressed && styles.pressed} onPress={scheduleNotificationHandler}>
+                    <Ionicons name="list" size={50} color={Colors.gray500}/>
+                </Pressable>
 
                 <TaskList taskList={outputTaskList}
                           onNextPriority={onNextPriority}
@@ -147,6 +153,9 @@ const styles = StyleSheet.create({
         height: "100%",
         alignItems: "center",
     },
+    pressed: {
+        opacity: 0.7
+    }
 });
 
 export default TodoScreen;

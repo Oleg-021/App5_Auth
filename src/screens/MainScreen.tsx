@@ -7,6 +7,7 @@ import {AppNavigation} from "../navigation";
 import {Colors} from "../util/constants/Colors";
 import {AnimatedOpacityView, LetsStartButton, TextLogo} from "../components/animated";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import {YaMap} from "react-native-yamap";
 
 interface IRoot {
 }
@@ -36,6 +37,9 @@ const MainScreen: React.FC<IRoot> = () => {
                 authContext.authenticate(storedToken, email);
             setIsTryingLogIn(false);
         });
+
+        YaMap.init("24da40b5-a8b7-47e7-896d-d59aa631de8e").catch(error => console.log("Error YaMap:", error));
+        YaMap.setLocale("en_US").catch(error => console.log("Set locale error:", error));
     }, []);
 
     // Render

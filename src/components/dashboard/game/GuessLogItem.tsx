@@ -1,7 +1,7 @@
 import React from "react";
 import {StyleSheet, Text, View} from "react-native";
 
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IGuessLogItem {
     roundNumber: number,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3
     },
     itemText: {
-        color: Colors.game.darkCherry,
+        color: Colors.game.dark,
         fontWeight: "bold"
     }
 });

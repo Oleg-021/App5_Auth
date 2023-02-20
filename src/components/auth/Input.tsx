@@ -1,7 +1,7 @@
 import React from "react";
 import {KeyboardType, StyleSheet, Text, TextInput, View} from "react-native";
 
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 
 interface IInput {
     label: string,

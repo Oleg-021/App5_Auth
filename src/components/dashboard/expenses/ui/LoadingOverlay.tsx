@@ -1,7 +1,7 @@
 import React from "react";
 import {ActivityIndicator, StyleSheet, View} from "react-native";
 
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 
 interface ILoadingOverlay {
 }

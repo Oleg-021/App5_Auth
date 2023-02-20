@@ -4,7 +4,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {AuthContext} from "../store/auth-context";
 import {AppNavigation} from "../navigation";
-import {Colors} from "../util/constants/Colors";
+import {Colors} from "../constants/Colors";
 import {AnimatedOpacityView, LetsStartButton, TextLogo} from "../components/animated";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {YaMap} from "react-native-yamap";

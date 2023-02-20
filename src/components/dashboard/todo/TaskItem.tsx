@@ -4,7 +4,7 @@ import {NavigationProp, useNavigation} from "@react-navigation/native";
 
 import {TodoTask} from "../../../models/todo/TodoTask";
 import {TaskPriority} from "../../../models/todo/TaskPriority";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface ITaskItem {
     item: TodoTask,

@@ -1,7 +1,7 @@
 import React from "react";
 import {Pressable, StyleSheet, Text} from "react-native";
 import {NavigationProp, useNavigation} from "@react-navigation/native";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IAddTaskButton {
 }

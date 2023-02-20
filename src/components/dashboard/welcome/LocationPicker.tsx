@@ -4,7 +4,7 @@ import Geolocation from "@react-native-community/geolocation";
 
 import Location from "../../../models/Location";
 import {OutlinedButton} from "../../ui";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 import {YaMap} from "react-native-yamap";
 
 interface ILocationPicker {

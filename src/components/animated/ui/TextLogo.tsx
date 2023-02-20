@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {StyleSheet} from "react-native";
 import Animated, {useAnimatedStyle, useSharedValue, withTiming} from "react-native-reanimated";
 
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface ITextLogo {
     text: string,

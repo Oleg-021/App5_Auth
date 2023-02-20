@@ -5,7 +5,7 @@ import {NavigationProp, RouteProp} from "@react-navigation/native";
 import {TaskPriority} from "../../../models/todo/TaskPriority";
 import {TodoTask} from "../../../models/todo/TodoTask";
 import {TabBar, TodoTextInput} from "../../../components/dashboard/todo";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface ITodoInputScreen {
     navigation: NavigationProp<any>,

@@ -1,7 +1,7 @@
 import React from "react";
 import {Platform, Pressable, StyleSheet, Text, View} from "react-native";
 
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 import LinearGradient from "react-native-linear-gradient";
 
 interface ICategoryGridTile {

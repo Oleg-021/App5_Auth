@@ -2,7 +2,7 @@ import React from "react";
 import {Image, Pressable, StyleSheet, Text, View} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 import MealDetails from "../MealDetails";
 
 interface IMealItem {

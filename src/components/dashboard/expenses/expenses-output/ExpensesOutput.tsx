@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 
 import {Expense} from "../../../../models/expenses/Expense";
 import ExpensesList from "./ExpensesList";
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 import ExpensesSummary from "./ExpensesSummary";
 
 interface IExpensesOutput {

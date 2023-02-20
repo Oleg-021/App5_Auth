@@ -5,7 +5,7 @@ import {Expense} from "../../../../models/expenses/Expense";
 import {getFormattedDate} from "../../../../util/dashboard/expenses/date";
 import Input from "./Input";
 import {Button} from "../ui";
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 
 interface IExpenseForm {
     onCancel: () => void,

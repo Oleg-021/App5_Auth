@@ -7,7 +7,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import {TodoTask} from "../../../models/todo/TodoTask";
 import {TaskPriority} from "../../../models/todo/TaskPriority";
 import {AddTaskButton, TaskList} from "../../../components/dashboard/todo";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 import {AuthContext} from "../../../store/auth-context";
 
 type PropsType = {};

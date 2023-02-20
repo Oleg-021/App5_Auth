@@ -6,7 +6,7 @@ import {StatusBar} from "react-native";
 import {store} from "../../store/recipes/store";
 import {MealDetailsScreen, MealsOverviewScreen} from "../../screens/dashboard/recipes";
 import RecipesDrawer from "./RecipesDrawer";
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 
 interface IRecipesNavigationStack {
 }

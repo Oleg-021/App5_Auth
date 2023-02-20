@@ -1,12 +1,12 @@
 import React, {useContext, useLayoutEffect, useState} from "react";
-import {StatusBar, StyleSheet, View} from "react-native";
+import {StyleSheet, View} from "react-native";
 import {NavigationProp, RouteProp} from "@react-navigation/native";
 
 import {ExpensesContext} from "../../../store/expenses/expenses-context";
 import {deleteExpense, storeExpense, updateExpense} from "../../../util/axios/dashboard/expenses";
 import {ErrorOverlay, IconButton, LoadingOverlay} from "../../../components/dashboard/expenses/ui";
 import ExpenseForm from "../../../components/dashboard/expenses/manage-expense/ExpenseForm";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IManageExpenseScreen {
     navigation: NavigationProp<any>,
@@ -75,8 +75,6 @@ const ManageExpenseScreen: React.FC<IManageExpenseScreen> = ({navigation, route}
         return <LoadingOverlay/>
 
     return <>
-        <StatusBar backgroundColor={Colors.yellow500} barStyle="dark-content"/>
-
         <View style={styles.container}>
             <ExpenseForm onCancel={cancelHandler}
                          onSubmit={confirmHandler}

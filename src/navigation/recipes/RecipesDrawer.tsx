@@ -2,7 +2,7 @@ import React from "react";
 import {Text} from "react-native";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 import {CategoriesScreen, FavoritesScreen} from "../../screens/dashboard/recipes";
 
 interface IRecipesDrawer {

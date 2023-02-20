@@ -10,7 +10,7 @@ import IconButton from "../../../components/dashboard/recipes/IconButton";
 import MealDetails from "../../../components/dashboard/recipes/MealDetails";
 import Subtitle from "../../../components/dashboard/recipes/meal-detail/Subtitle";
 import List from "../../../components/dashboard/recipes/meal-detail/List";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IMealDetailsScreen {
     route: RouteProp<any, any>,

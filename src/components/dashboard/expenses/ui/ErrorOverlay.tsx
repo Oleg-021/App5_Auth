@@ -2,7 +2,7 @@ import React from "react";
 import {StyleSheet, Text, View} from "react-native";
 
 import Button from "./Button";
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 
 interface IErrorOverlay {
     message: string,

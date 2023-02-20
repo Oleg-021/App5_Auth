@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Alert, KeyboardAvoidingView, ScrollView, StyleSheet, TextInput, useWindowDimensions, View} from "react-native";
 import {Card, InstructionText, PrimaryButton, Title} from "../../../components/dashboard/game/ui";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IStartGameScreen {
     onPickNumber: (pickedNumber: number) => void

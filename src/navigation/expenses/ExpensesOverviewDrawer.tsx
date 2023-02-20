@@ -1,7 +1,7 @@
 import React from "react";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 import {IconButton} from "../../components/dashboard/expenses/ui";
 import {AllExpensesScreen, RecentExpensesScreen} from "../../screens/dashboard/expenses";
 import Ionicons from "react-native-vector-icons/Ionicons";

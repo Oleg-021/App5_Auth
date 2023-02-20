@@ -2,7 +2,7 @@ import React from "react";
 import {Image, ScrollView, StyleSheet, Text, useWindowDimensions, View} from "react-native";
 
 import {PrimaryButton, Title} from "../../../components/dashboard/game/ui";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IGameOverScreen {
     roundsNumber: number,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     imageContainer: {
         margin: 36,
         borderWidth: 3,
-        borderColor: Colors.game.darkCherry,
+        borderColor: Colors.game.dark,
         overflow: "hidden"
     },
     image: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     highlight: {
-        color: Colors.game.darkCherry,
+        color: Colors.game.dark,
         fontWeight: "bold",
     }
 });

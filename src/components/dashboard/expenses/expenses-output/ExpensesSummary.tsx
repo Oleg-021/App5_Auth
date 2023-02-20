@@ -2,7 +2,7 @@ import React from "react";
 import {StyleSheet, Text, View} from "react-native";
 
 import {Expense} from "../../../../models/expenses/Expense";
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 
 interface IExpensesSummary {
     periodName: string,

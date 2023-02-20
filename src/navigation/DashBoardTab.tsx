@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import {Colors} from "../util/constants/Colors";
+import {Colors} from "../constants/Colors";
 import {WelcomeScreen} from "../screens";
 import {IconButton} from "../components/ui";
 import {AuthContext} from "../store/auth-context";

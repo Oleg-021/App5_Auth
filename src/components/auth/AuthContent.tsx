@@ -4,7 +4,7 @@ import {useNavigation} from "@react-navigation/native";
 
 import {CredentialsInvalid} from "../../models/auth/CredentialsInvalid";
 import {Credentials} from "../../models/auth/Credentials";
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 import {FlatButton} from "../ui";
 import AuthForm from "./AuthForm";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";

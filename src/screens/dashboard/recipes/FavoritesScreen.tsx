@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 import {MEALS} from "../../../assets/dashboard/recipes/dummy-data";
 import MealsList from "../../../components/dashboard/recipes/meal-list/MealsList";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IFavoritesScreen {
 }

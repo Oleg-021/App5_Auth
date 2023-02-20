@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Image, Pressable, StyleSheet, Text, View} from "react-native";
 import {launchCamera} from "react-native-image-picker";
 
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IImagePicker {
     onTakeImage: (imageUri: string) => void

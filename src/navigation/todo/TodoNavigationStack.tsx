@@ -4,7 +4,7 @@ import {StatusBar} from "react-native";
 
 import TodoInputScreen from "../../screens/dashboard/todo/TodoInputScreen";
 import TodoScreen from "../../screens/dashboard/todo/TodoScreen";
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 
 interface ITodoNavigationStack {
 }

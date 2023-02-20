@@ -2,7 +2,7 @@ import React from "react";
 import {Pressable, StyleSheet, Text} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 
 interface IOutlinedButton {
     children: string,

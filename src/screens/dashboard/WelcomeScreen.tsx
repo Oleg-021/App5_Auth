@@ -2,7 +2,7 @@ import React, {useCallback, useContext, useEffect, useState} from "react";
 import {StyleSheet, Text, View} from "react-native";
 
 import {AuthContext} from "../../store/auth-context";
-import {Colors} from "../../util/constants/Colors";
+import {Colors} from "../../constants/Colors";
 import {getUserData} from "../../util/axios/auth/auth";
 import {ImagePicker, LocationPicker} from "../../components/dashboard/welcome";
 import Location from "../../models/Location";

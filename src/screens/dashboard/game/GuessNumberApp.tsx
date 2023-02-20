@@ -5,7 +5,7 @@ import LinearGradient from "react-native-linear-gradient";
 import StartGameScreen from "./StartGameScreen";
 import GameScreen from "./GameScreen";
 import GameOverScreen from "./GameOverScreen";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface IGuessNumberApp {
 }

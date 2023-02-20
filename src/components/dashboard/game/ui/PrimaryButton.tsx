@@ -1,7 +1,7 @@
 import React from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
 
-import {Colors} from "../../../../util/constants/Colors";
+import {Colors} from "../../../../constants/Colors";
 
 interface IPrimaryButton {
     children: string | React.ReactElement,
@@ -14,7 +14,7 @@ const PrimaryButton: React.FC<IPrimaryButton> = ({children, onPress}) => {
             <Pressable onPress={onPress}
                        style={({pressed}) => pressed ? [styles.buttonInnerContainer, styles.pressed]
                            : styles.buttonInnerContainer}
-                       android_ripple={{color: Colors.game.darkCherry}}>
+                       android_ripple={{color: Colors.game.dark}}>
                 <Text style={styles.buttonText}>{children}</Text>
             </Pressable>
         </View>

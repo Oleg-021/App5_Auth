@@ -1,8 +1,8 @@
 import React from "react";
-import {Pressable, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {Pressable, StyleSheet, Text, TextInput, View} from "react-native";
 
 import {TaskPriority} from "../../../models/todo/TaskPriority";
-import {Colors} from "../../../util/constants/Colors";
+import {Colors} from "../../../constants/Colors";
 
 interface ITodoTextInput {
     text: string,

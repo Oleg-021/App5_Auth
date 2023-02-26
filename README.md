@@ -7,8 +7,8 @@
 >3. useLayoutEffect
 >4. useReducer
 >5. useRef?
->6. useCallback?
->7. useMemo?
+>6. useCallback
+>7. useMemo / memo
 
 >### Navigation:
 >1. Native Stack / Stack

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
 import {NavigationProp, useNavigation} from "@react-navigation/native";
 
@@ -16,7 +16,7 @@ interface ITaskItem {
     onDelete(): void
 }
 
-const TaskItem: React.FC<ITaskItem> = ({item, onNextPriority, onDone, onDelete}) => {
+const TaskItem: React.FC<ITaskItem> = memo(({item, onNextPriority, onDone, onDelete}) => {
     const navigation = useNavigation<NavigationProp<any>>();
     const textDoneStyle = item.done ? styles.textDone : styles.emptyStyle;
     const btnDoneStyle = item.done ? styles.btnDone : styles.btnNotDone;
@@ -27,6 +27,8 @@ const TaskItem: React.FC<ITaskItem> = ({item, onNextPriority, onDone, onDelete})
     const navigateToTextInput = () => {
         navigation.navigate("TodoInput", {task: item})
     }
+
+    console.log("Render task:", item.text);
 
     return (
         <View style={styles.container}>
@@ -51,7 +53,11 @@ const TaskItem: React.FC<ITaskItem> = ({item, onNextPriority, onDone, onDelete})
             </View>
         </View>
     );
-}
+}, (prevProps, nextProps) => {
+    return prevProps.item.priority === nextProps.item.priority &&
+        prevProps.item.done === nextProps.item.done &&
+        prevProps.item.text === nextProps.item.text;
+});
 
 const styles = StyleSheet.create({
     container: {

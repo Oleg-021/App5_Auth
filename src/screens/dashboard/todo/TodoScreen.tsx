@@ -103,7 +103,7 @@ const TodoScreen: React.FC<PropsType> = () => {
                 setTaskList(JSON.parse(todoList));
             }
         });
-    }, []);
+    }, [])
 
     useEffect(() => {
         if (taskList.length > 0)
@@ -111,7 +111,7 @@ const TodoScreen: React.FC<PropsType> = () => {
         else
             setLastId(1);
 
-        AsyncStorage.setItem(`todoList-${authContext}`, JSON.stringify(taskList));
+        AsyncStorage.setItem(`todoList-${authContext.email}`, JSON.stringify(taskList));
     }, [taskList])
 
     useEffect(() => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo, useEffect} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
 
 import {ParamListBase, useNavigation} from "@react-navigation/native";
@@ -22,6 +22,10 @@ const ExpenseItem: React.FC<IExpenseItem> = ({id, description, amount, date}) =>
             expenseId: id
         });
     }
+
+    useEffect(() => {
+        console.log("Render expense:", description);
+    })
 
     return (
         <Pressable style={({pressed}) => pressed ? styles.pressed : null} onPress={expensePressHandler}>
@@ -94,4 +98,9 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ExpenseItem;
+export default memo(ExpenseItem, (prevProps, nextProps) => {
+    return prevProps.id === nextProps.id &&
+        prevProps.description === nextProps.description &&
+        prevProps.amount === nextProps.amount &&
+        prevProps.date === nextProps.date;
+});

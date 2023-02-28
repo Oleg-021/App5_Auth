@@ -5,7 +5,7 @@ import Geolocation from "@react-native-community/geolocation";
 import Location from "../../../models/Location";
 import {OutlinedButton} from "../../ui";
 import {Colors} from "../../../constants/Colors";
-import {YaMap} from "react-native-yamap";
+//import {YaMap} from "react-native-yamap";
 
 interface ILocationPicker {
     onPickLocation: (location: Location) => void
@@ -37,7 +37,8 @@ const LocationPicker: React.FC<ILocationPicker> = ({onPickLocation}) => {
     let mapContent = <Text>Set your location.</Text>;
 
     if (pickedLocation)
-        mapContent = <YaMap style={styles.map} initialRegion={{lat: pickedLocation.latitude, lon: pickedLocation.longitude}}/>
+        mapContent = <Text>Latitude: {pickedLocation.latitude}, Longitude: {pickedLocation.longitude}</Text>;
+        //mapContent = <YaMap style={styles.map} initialRegion={{lat: pickedLocation.latitude, lon: pickedLocation.longitude}}/>
 
     return (
         <View>

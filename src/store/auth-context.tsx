@@ -33,16 +33,17 @@ const AuthContextProvider: React.FC<IAuthContextProvider> = ({children}) => {
     // Functions
     const authenticate = (token: string, email: string = "") => {
         setAuthToken(token);
-        setEmail(email)
+        setEmail(email);
+        // SecureStorage
         AsyncStorage.setItem("token", token);
         AsyncStorage.setItem("email", email);
     }
 
     const logout = () => {
         setAuthToken(undefined);
-        setEmail("")
+        setEmail("");
         AsyncStorage.removeItem("token");
-        AsyncStorage.removeItem("email")
+        AsyncStorage.removeItem("email");
     }
 
     // Render

@@ -18,8 +18,9 @@
 >### Store:
 >1. Context API
 >2. Redux Toolkit
->3. AsyncStore
->4. FirebaseDB
+>3. AsyncStorage 
+>4. SecureStorage
+>5. FirebaseDB
 
 >### Animation:
 >1. Reanimated 2
@@ -45,5 +46,6 @@
 > 1. Geolocation
 > 2. Camera - Image Picker
 > 3. Maps - YaMap?
+> 4. Loading Overlays
 
 

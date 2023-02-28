@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
         overflow: Platform.select({android: "hidden", ios: "visible"})
     },
     container: {
-        flex: 1
+        flex: 1,
+        borderRadius: 10
     },
     innerContainer: {
         flex: 1,

@@ -39,8 +39,8 @@
 > 4. Vector Icons
 
 >### Notifications:
-> 1. Local
-> 2. Push
+> 1. Local?
+> 2. Push?
 
 >### Other functionalities: 
 > 1. Geolocation

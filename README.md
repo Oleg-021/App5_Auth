@@ -1,4 +1,4 @@
-# App5_Auth
+# App_RN_TS
 ## Tech Stack:
 
 >### Hooks:

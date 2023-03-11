@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ExpensesContext} from "../../../store/expenses/expenses-context";
-import {getDateMinusDays} from "../../../util/dashboard/expenses/date";
-import {fetchExpenses} from "../../../util/axios/dashboard/expenses";
+import {getDateMinusDays} from "../../../utils/dashboard/expenses/date";
+import {fetchExpenses} from "../../../utils/axios/dashboard/expenses";
 import {ErrorOverlay, LoadingOverlay} from "../../../components/dashboard/expenses/ui";
 import {ExpensesOutput} from "../../../components/dashboard/expenses/expenses-output";
 

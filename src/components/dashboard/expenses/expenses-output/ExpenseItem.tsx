@@ -3,7 +3,7 @@ import {Pressable, StyleSheet, Text, View} from "react-native";
 
 import {ParamListBase, useNavigation} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {getFormattedDate} from "../../../../util/dashboard/expenses/date";
+import {getFormattedDate} from "../../../../utils/dashboard/expenses/date";
 import {Colors} from "../../../../constants/Colors";
 
 interface IExpenseItem {

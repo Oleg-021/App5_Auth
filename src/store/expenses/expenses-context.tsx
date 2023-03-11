@@ -54,7 +54,6 @@ const expensesReducer = (state: Expense[], action: any) => {
     }
 }
 
-
 const ExpensesContextProvider: React.FC<IExpensesContextProvider> = ({children}) => {
     const [expensesState, dispatch] = useReducer(expensesReducer, []);
 

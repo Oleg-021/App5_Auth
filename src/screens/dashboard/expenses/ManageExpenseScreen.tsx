@@ -3,7 +3,7 @@ import {StyleSheet, View} from "react-native";
 import {NavigationProp, RouteProp} from "@react-navigation/native";
 
 import {ExpensesContext} from "../../../store/expenses/expenses-context";
-import {deleteExpense, storeExpense, updateExpense} from "../../../util/axios/dashboard/expenses";
+import {deleteExpense, storeExpense, updateExpense} from "../../../utils/axios/dashboard/expenses";
 import {ErrorOverlay, IconButton, LoadingOverlay} from "../../../components/dashboard/expenses/ui";
 import ExpenseForm from "../../../components/dashboard/expenses/manage-expense/ExpenseForm";
 import {Colors} from "../../../constants/Colors";

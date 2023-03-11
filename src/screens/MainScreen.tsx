@@ -7,7 +7,7 @@ import {AppNavigation} from "../navigation";
 import {Colors} from "../constants/Colors";
 import {AnimatedOpacityView, LetsStartButton, TextLogo} from "../components/animated";
 import Ionicons from "react-native-vector-icons/Ionicons";
-//import {YaMap} from "react-native-yamap";
+import {YaMap} from "react-native-yamap";
 
 interface IRoot {
 }
@@ -27,7 +27,7 @@ const MainScreen: React.FC<IRoot> = () => {
 
     // Effects
     useEffect(() => {
-        AsyncStorage.getItem("token").then( async (storedToken) => {
+        AsyncStorage.getItem("token").then(async (storedToken) => {
             let email = await AsyncStorage.getItem("email");
 
             if (!email)
@@ -38,8 +38,8 @@ const MainScreen: React.FC<IRoot> = () => {
             setIsTryingLogIn(false);
         });
 
-      //  YaMap.init("24da40b5-a8b7-47e7-896d-d59aa631de8e").catch(error => console.log("Error YaMap:", error));
-        //YaMap.setLocale("en_US").catch(error => console.log("Set locale error:", error));
+        YaMap.init("24da40b5-a8b7-47e7-896d-d59aa631de8e").catch(error => console.log("Error YaMap:", error));
+        YaMap.setLocale("en_US").catch(error => console.log("Set locale error:", error));
     }, []);
 
     // Render
@@ -65,7 +65,7 @@ const MainScreen: React.FC<IRoot> = () => {
         );
         // desktop-outline
         // logo-electron
-        // logo-buffer
+    // logo-buffer
     else
         return <>
             <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>

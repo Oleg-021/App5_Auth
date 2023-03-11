@@ -3,7 +3,7 @@ import {Alert} from "react-native";
 
 import {AuthContent} from "../../components/auth";
 import {LoadingOverlay} from "../../components/ui";
-import {logIn} from "../../util/axios/auth/auth";
+import {logIn} from "../../utils/axios/auth/auth";
 import {AuthContext} from "../../store/auth-context";
 import {AnimatedBottomAppearanceView, AnimatedOpacityView} from "../../components/animated";
 import Logo from "../../components/auth/Logo";

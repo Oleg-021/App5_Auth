@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {Alert} from "react-native";
 
 import AuthContent from "../../components/auth/AuthContent";
-import {createUser} from "../../util/axios/auth/auth";
+import {createUser} from "../../utils/axios/auth/auth";
 import {LoadingOverlay} from "../../components/ui";
 import {AuthContext} from "../../store/auth-context";
 import {AnimatedBottomAppearanceView, AnimatedOpacityView} from "../../components/animated";

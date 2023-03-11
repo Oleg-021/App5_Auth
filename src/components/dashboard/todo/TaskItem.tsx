@@ -28,8 +28,6 @@ const TaskItem: React.FC<ITaskItem> = memo(({item, onNextPriority, onDone, onDel
         navigation.navigate("TodoInput", {task: item})
     }
 
-    console.log("Render task:", item.text);
-
     return (
         <View style={styles.container}>
             <Pressable style={({pressed}) => [pressed && styles.pressed]} onPress={navigateToTextInput}>

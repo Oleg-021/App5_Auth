@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {StyleSheet, Text, View} from "react-native";
 
 import {Expense} from "../../../../models/expenses/Expense";
-import {getFormattedDate} from "../../../../util/dashboard/expenses/date";
+import {getFormattedDate} from "../../../../utils/dashboard/expenses/date";
 import Input from "./Input";
 import {Button} from "../ui";
 import {Colors} from "../../../../constants/Colors";

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 
 import {AuthContext} from "../../store/auth-context";
 import {Colors} from "../../constants/Colors";
-import {getUserData} from "../../util/axios/auth/auth";
+import {getUserData} from "../../utils/axios/auth/auth";
 import {ImagePicker, LocationPicker} from "../../components/dashboard/welcome";
 import Location from "../../models/Location";
 

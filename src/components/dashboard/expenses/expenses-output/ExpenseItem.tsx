@@ -3,7 +3,7 @@ import {Pressable, StyleSheet, Text, View} from "react-native";
 
 import {ParamListBase, useNavigation} from "@react-navigation/native";
 import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {getFormattedDate} from "../../../../util/dashboard/expenses/date";
+import {getFormattedDate} from "../../../../utils/dashboard/expenses/date";
 import {Colors} from "../../../../constants/Colors";
 
 interface IExpenseItem {
@@ -23,9 +23,9 @@ const ExpenseItem: React.FC<IExpenseItem> = ({id, description, amount, date}) =>
         });
     }
 
-    useEffect(() => {
+    /*useEffect(() => {
         console.log("Render expense:", description);
-    })
+    })*/
 
     return (
         <Pressable style={({pressed}) => pressed ? styles.pressed : null} onPress={expensePressHandler}>

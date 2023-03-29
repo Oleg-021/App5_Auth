@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {memo, useEffect} from "react";
 import {StyleSheet} from "react-native";
 import Animated, {useAnimatedStyle, useSharedValue, withTiming} from "react-native-reanimated";
 
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default TextLogo;
+export default memo(TextLogo);

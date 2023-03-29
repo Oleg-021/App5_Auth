@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useCallback, useContext, useEffect, useState} from "react";
 import {StatusBar, StyleSheet, Text, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -21,9 +21,9 @@ const MainScreen: React.FC<IRoot> = () => {
     const authContext = useContext(AuthContext);
 
     // Functions
-    const letsStartHandler = () => {
+    const letsStartHandler = useCallback(() => {
         setIsLetsStart(true);
-    }
+    }, [setIsLetsStart])
 
     // Effects
     useEffect(() => {

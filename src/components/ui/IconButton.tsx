@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import {Pressable, StyleSheet} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default IconButton;
+export default memo(IconButton);

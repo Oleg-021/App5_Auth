@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import {Pressable, StyleSheet, Text, View} from "react-native";
 
 import {Colors} from "../../../constants/Colors";
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default IconButton;
+export default memo(IconButton);

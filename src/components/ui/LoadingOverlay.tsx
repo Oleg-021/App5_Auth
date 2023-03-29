@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import {ActivityIndicator, StyleSheet, Text, View} from "react-native";
 
 interface ILoadingOverlay {
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoadingOverlay;
+export default memo(LoadingOverlay);

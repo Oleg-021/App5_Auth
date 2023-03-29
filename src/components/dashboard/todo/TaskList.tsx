@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Dimensions, FlatList, StyleSheet, View } from "react-native";
+import React, {useEffect, useState} from "react";
+import {Dimensions, FlatList, StyleSheet, View} from "react-native";
 
 import TaskItem from "./TaskItem";
 import {TodoTask} from "../../../models/todo/TodoTask";
@@ -37,7 +37,7 @@ const TaskList: React.FC<ITaskList> = ({taskList, onNextPriority, onDone, onDele
         })
     }, [])
 
-    const renderItem = ({item}: {item: TodoTask}) => {
+    const renderItem = ({item}: { item: TodoTask }) => {
         return <TaskItem key={item.id}
                          item={item}
                          onNextPriority={() => onNextPriority(item.id)}

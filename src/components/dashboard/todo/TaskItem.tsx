@@ -8,11 +8,8 @@ import {Colors} from "../../../constants/Colors";
 
 interface ITaskItem {
     item: TodoTask,
-
     onNextPriority(): void,
-
     onDone(): void,
-
     onDelete(): void
 }
 

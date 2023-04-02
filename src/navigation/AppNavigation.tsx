@@ -4,8 +4,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import {AuthContext} from "../store/auth-context";
 import {DashBoardTab, AuthStack} from "./index";
 
-interface IAppNavigation {
-}
+interface IAppNavigation {}
 
 const AppNavigation: React.FC<IAppNavigation> = () => {
     const authContext = useContext(AuthContext);

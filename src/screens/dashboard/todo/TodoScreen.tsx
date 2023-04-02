@@ -133,7 +133,6 @@ const TodoScreen: React.FC<PropsType> = () => {
                           onNextPriority={onNextPriority}
                           onDone={onDone}
                           onDelete={onDelete}/>
-
                 <AddTaskButton/>
             </View>
         </SafeAreaView>

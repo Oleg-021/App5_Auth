@@ -11,8 +11,7 @@ import RecipesNavigationStack from "./recipes/RecipesNavigationStack";
 import ExpensesNavigationStack from "./expenses/ExpensesNavigationStack";
 import TodoNavigationStack from "./todo/TodoNavigationStack";
 
-interface IDashBoardTab {
-}
+interface IDashBoardTab {}
 
 const Tab = createBottomTabNavigator();
 
@@ -30,46 +29,35 @@ const DashBoardTab: React.FC<IDashBoardTab> = () => {
             <Tab.Screen name="Welcome"
                         component={WelcomeScreen}
                         options={{
-                            headerRight: ({tintColor}) => <IconButton icon="exit" color={tintColor || Colors.yellow500}
-                                                                      size={24} onPress={authContext.logout}/>,
-                            tabBarIcon: ({color, size}) => <Ionicons name="hand-right-outline" color={color}
-                                                                     size={size}/>
-                        }}
-            />
+                            headerRight: ({tintColor}) => <IconButton icon="exit" color={tintColor || Colors.yellow500} size={24} onPress={authContext.logout}/>,
+                            tabBarIcon: ({color, size}) => <Ionicons name="hand-right-outline" color={color} size={size}/>
+                        }} />
             <Tab.Screen name="Game"
                         component={GuessNumberApp}
                         options={{
-                            tabBarIcon: ({color, size}) => <Ionicons name="game-controller-outline" color={color}
-                                                                     size={size}/>,
+                            tabBarIcon: ({color, size}) => <Ionicons name="game-controller-outline" color={color} size={size}/>,
                             headerShown: false
-                        }}
-            />
+                        }} />
             <Tab.Screen name="Recipes"
                         component={RecipesNavigationStack}
                         options={{
-                            tabBarIcon: ({color, size}) => <Ionicons name="pizza-outline" color={color}
-                                                                     size={size}/>,
+                            tabBarIcon: ({color, size}) => <Ionicons name="pizza-outline" color={color} size={size}/>,
                             headerShown: false
-                        }}
-            />
+                        }} />
             <Tab.Screen name="Expenses"
                         component={ExpensesNavigationStack}
                         options={{
                             tabBarStyle: {backgroundColor: Colors.yellow500, borderTopWidth: 0, borderBottomWidth: 0},
                             tabBarActiveTintColor: Colors.gray700,
                             tabBarInactiveTintColor: Colors.gray400,
-                            tabBarIcon: ({color, size}) => <Ionicons name="card-outline" color={color}
-                                                                     size={size}/>,
+                            tabBarIcon: ({color, size}) => <Ionicons name="card-outline" color={color} size={size}/>,
                             headerShown: false
-                        }}
-            />
+                        }} />
             <Tab.Screen name="TodoApp"
                         component={TodoNavigationStack}
                         options={{
-                            tabBarIcon: ({color, size}) => <Ionicons name="list" color={color}
-                                                                     size={size}/>,
-                        }}
-            />
+                            tabBarIcon: ({color, size}) => <Ionicons name="list" color={color} size={size}/>,
+                        }} />
         </Tab.Navigator>
     </>;
 }

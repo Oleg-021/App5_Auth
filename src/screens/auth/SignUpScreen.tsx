@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import {Alert} from "react-native";
 
 import AuthContent from "../../components/auth/AuthContent";
@@ -19,7 +19,7 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
     const authContext = useContext(AuthContext);
 
     // Functions
-    const signUpHandler = async ({email, password}: { email: string, password: string }) => {
+    const signUpHandler = useCallback(async ({email, password}: { email: string, password: string }) => {
         setIsAuthenticating(true);
         try {
             const token = await createUser(email, password);
@@ -28,7 +28,7 @@ const SignUpScreen: React.FC<ISignUpScreen> = () => {
             Alert.alert("Authentication failed", "Could not create user. Check your input and try again later.");
             setIsAuthenticating(false);
         }
-    }
+    }, []);
 
     // Render
     if (isAuthenticating)

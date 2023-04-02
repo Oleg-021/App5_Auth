@@ -42,8 +42,7 @@ const TaskList: React.FC<ITaskList> = ({taskList, onNextPriority, onDone, onDele
                          item={item}
                          onNextPriority={() => onNextPriority(item.id)}
                          onDone={() => onDone(item.id)}
-                         onDelete={() => onDelete(item.id)}
-        />
+                         onDelete={() => onDelete(item.id)} />
     }
 
     return (

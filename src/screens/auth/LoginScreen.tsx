@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import {Alert} from "react-native";
 
 import {AuthContent} from "../../components/auth";
@@ -19,7 +19,7 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
     const authContext = useContext(AuthContext);
 
     // Functions
-    const signInHandler = async ({email, password}: { email: string, password: string }) => {
+    const signInHandler = useCallback(async ({email, password}: { email: string, password: string }) => {
         setIsAuthenticating(true);
         try {
             const token = await logIn(email, password);
@@ -28,7 +28,7 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
             Alert.alert("Authentication failed!", "Could not log you in. Check your credentials. or try again later");
             setIsAuthenticating(false);
         }
-    }
+    }, []);
 
     // Render
     if (isAuthenticating)

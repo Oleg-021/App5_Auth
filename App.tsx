@@ -1,17 +1,21 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
+import {Provider} from "react-redux";
 
 import {Colors} from "./src/constants/Colors"
-import AuthContextProvider from "./src/store/auth-context";
+import {store} from "./src/store/recipes/store";
 import MainScreen from "./src/screens/MainScreen";
+import AuthContextProvider from "./src/store/auth-context";
 
 function App(): JSX.Element {
     return <>
         <StatusBar backgroundColor={Colors.yellow500} barStyle="dark-content"/>
 
-        <AuthContextProvider>
-            <MainScreen/>
-        </AuthContextProvider>
+        <Provider store={store}>
+            <AuthContextProvider>
+                <MainScreen/>
+            </AuthContextProvider>
+        </Provider>
     </>
 }
 

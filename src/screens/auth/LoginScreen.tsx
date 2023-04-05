@@ -1,5 +1,5 @@
 import React, {useCallback, useContext, useState} from "react";
-import {Alert} from "react-native";
+import {Alert, StyleSheet} from "react-native";
 
 import {AuthContent} from "../../components/auth";
 import {LoadingOverlay} from "../../components/ui";
@@ -43,7 +43,6 @@ const LoginScreen: React.FC<ILoginScreen> = () => {
             <AuthContent isLogin={true} onAuthenticate={signInHandler}/>
         </AnimatedBottomAppearanceView>
     </>
-
 }
 
 export default LoginScreen;

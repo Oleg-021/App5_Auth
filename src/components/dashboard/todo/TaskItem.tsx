@@ -8,12 +8,16 @@ import {Colors} from "../../../constants/Colors";
 
 interface ITaskItem {
     item: TodoTask,
+
     onNextPriority(): void,
+
     onDone(): void,
+
     onDelete(): void
 }
 
 const TaskItem: React.FC<ITaskItem> = memo(({item, onNextPriority, onDone, onDelete}) => {
+    // Params
     const navigation = useNavigation<NavigationProp<any>>();
     const textDoneStyle = item.done ? styles.textDone : styles.emptyStyle;
     const btnDoneStyle = item.done ? styles.btnDone : styles.btnNotDone;
@@ -21,10 +25,12 @@ const TaskItem: React.FC<ITaskItem> = memo(({item, onNextPriority, onDone, onDel
         item.priority === TaskPriority.Medium ? styles.mediumPriority :
             item.priority === TaskPriority.Low ? styles.lowPriority : styles.emptyStyle;
 
+    // Functions
     const navigateToTextInput = () => {
         navigation.navigate("TodoInput", {task: item})
     }
 
+    // Render
     return (
         <View style={styles.container}>
             <Pressable style={({pressed}) => [pressed && styles.pressed]} onPress={navigateToTextInput}>

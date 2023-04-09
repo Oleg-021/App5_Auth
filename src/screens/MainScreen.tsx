@@ -6,8 +6,10 @@ import {Colors} from "../constants/Colors";
 import useYaMap from "../hooks/useYaMap";
 import WelcomeScreen from "./WelcomeScreen";
 import useAuth from "../hooks/useAuth";
+import AuthContextProvider from "../store/auth-context";
 
-interface IRoot {}
+interface IRoot {
+}
 
 const MainScreen: React.FC<IRoot> = () => {
     const [isLetsStart, setIsLetsStart] = useState(false);
@@ -22,10 +24,12 @@ const MainScreen: React.FC<IRoot> = () => {
     if (!isLetsStart && !isAuth)
         return <WelcomeScreen onLetsStart={letsStartHandler}/>
     else
-        return <>
-            <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>
-            <AppNavigation/>
-        </>
+        return (
+            <AuthContextProvider>
+                <StatusBar backgroundColor={Colors.gray500} barStyle="light-content"/>
+                <AppNavigation/>
+            </AuthContextProvider>
+        );
 }
 
 export default MainScreen;
